@@ -67,7 +67,9 @@ public class AnalyzerService {
         return out.toString();
     }
 
-    public void depth(String[] args) {
+    public String depth(String[] args) {
+        String out = "";
+
         long startParam = System.currentTimeMillis();
 
         int depth = Integer.parseInt(args[2]);
@@ -83,16 +85,18 @@ public class AnalyzerService {
         long endPhrase = System.currentTimeMillis();
 
         if (isVerbose) {
-            System.out.println("--------------------------------------");
-            System.out.println("Tempo de carregamento dos parâmetros: " + (endParam - startParam) + "ms");
-            System.out.println("--------------------------------------");
+            out += "------------------------------------------------------------\n";
+            out += "Tempo de carregamento dos parâmetros: " + (endParam - startParam) + "ms\n";
+            out += "------------------------------------------------------------\n";
 
-            System.out.println("--------------------------------------");
-            System.out.println("Tempo de verificação da frase: " + (endPhrase - startPhrase) + "ms");
-            System.out.println("--------------------------------------");
+            out += "------------------------------------------------------------\n";
+            out += "Tempo de verificação da frase: " + (endPhrase - startPhrase) + "ms\n";
+            out += "------------------------------------------------------------\n";
         }
 
-        System.out.println(res);
+        out += res;
+
+        return out;
     }
 
 }
