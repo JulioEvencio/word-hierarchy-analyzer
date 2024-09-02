@@ -6,15 +6,17 @@ This repository contains two projects for analyzing word hierarchy.
 
 The CLI project is a maven project (made in Java 21 - OpenJDK 21), this program runs in the terminal and receives the following parameters:
 
-syntax: java -jar cli.jar analyze –depth <n> –verbose (optional) “{phrase}”
+syntax: ```java -jar cli.jar analyze –depth <n> –verbose (optional) “{phrase}”```
+
+
 Analyzes the given phrase and displays a table with the word count at the specified depth level.
 
 Parameters:
-● –depth <n>: Tree depth level for which to display the count
-● “{phrase}” text to be analyzed
-● –verbose: If informed, it should display a table on stdout with the following metrics:
-○ Parameter loading time (ms)
-○ Phrase verification time (ms)
+  - –depth <n>: Tree depth level for which to display the count
+  - “{phrase}” text to be analyzed
+  - –verbose: If informed, it should display a table on stdout with the following metrics:
+  - Parameter loading time (ms)
+  - Phrase verification time (ms)
 
 Example:
 
